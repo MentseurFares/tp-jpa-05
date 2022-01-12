@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta charset="utf-8">
+
+<nav th:fragment="navbar" class="navbar navbar-dark navbar-expand-lg bg-dark">
+
+	<div class="container-fluid my-3">
+		<a class="navbar-brand fs-2 mx-2 text-succes" href="#">💵 Banque <span class="fw-bold">Spring Boot</span></a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbar">
+			<ul class="navbar-nav">
+				<li><a class="fs-4 lien_navbar ms-4" th:href="@{/banque/banques}">Banques</a></li>
+				<li><a class="fs-4 lien_navbar ms-4" th:href="@{/client/clients}">Clients</a></li>
+				<li class="nav-item dropdown">
+		          <a class="dropdown-toggle fs-4 lien_navbar ms-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+		            Comptes
+		          </a>
+		          <ul class="dropdown-menu">
+		            <li><a class="dropdown-item" th:href="@{/compte/comptes}">Tous les comptes</a></li>
+		            <li><a class="dropdown-item" th:href="@{/livret_a/comptes}">Livrets A</a></li>
+		            <li><a class="dropdown-item" th:href="@{/assurance_vie/comptes}">Assurances vie</a></li>
+		          </ul>
+		        </li>
+				<li class="nav-item dropdown">
+		          <a class="dropdown-toggle fs-4 lien_navbar ms-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+		            Operations
+		          </a>
+		          <ul class="dropdown-menu">
+		            <li><a class="dropdown-item" th:href="@{/operation/operations}">Toutes les opérations</a></li>
+		            <li><a class="dropdown-item" th:href="@{/virement/operations}">Virements</a></li>
+		          </ul>
+		        </li>
+		        <li class="ml-4"><a class="btn btn-outline-danger ms-5" th:href="@{/logout}" id="deconnexion">Déconnexion</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</nav>
+
+</html>
